@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script src="jquery-3.7.0.min.js"></script>
+<script src="plotly-2.23.2.min.js"></script>
+<script src="system.data.js"></script>
+<script src="side.js"></script>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="plot_system_usage.js"></script>
+
+<body>
+  <div class="sidenav" id="side_nav">
+  </div>
+  <div class="main">
+    <div id="figure">
+    </div>
+    <div class="options">
+      <select id="ma_type_selector" va onchange="onMaTypeChange(this.value)">
+        <option value="cpu">cpu</option>
+        <option value="cpu_c">cpu_c</option>
+        <option value="mem">mem</option>
+        <option value="read_bytes">read_bytes</option>
+        <option value="write_bytes">write_bytes</option>
+      </select>
+      <label> ma: </label>
+      <select id="ma_value_selector" va onchange="onMaValueChange(this.value)">
+        <option value="30">30</option>
+        <option value="60">60</option>
+        <option value="180">180</option>
+        <option value="300">300</option>
+        <option value="custom">custom</option>
+      </select>
+      <div id="custom_ma">
+        <label>custom ma: </label>
+        <input type="text" id="custom_ma_value">
+        <button onclick="addCustomMa()">confirm</button>
+        </input>
+      </div>
+    </div>
+    <div>
+      <p>
+        <a href="index.html">HOME</a>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

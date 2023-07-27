@@ -1,0 +1,69 @@
+
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: auto;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ead9d9;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidenav ul li {
+  list-style-type: none;
+  background-color: #3e3d3d;
+  margin: 0;
+  padding: 0;
+}
+
+.sidenav ul li ul {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidenav ul li ul li a {
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding-left: 1.5rem;
+    background-color: #1d1d1d;
+}
+
+.sidenav ul li ul li a.selected {
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding-left: 1.5rem;
+    background-color: #000000;
+}
+
+.main {
+  margin-left: 300px; /* Same as the width of the sidenav */
+  /*font-size: 28px;  Increased text to enable scrolling */
+  padding: 0px 10px;
+  text-align: center;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

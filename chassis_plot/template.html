@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<script src="jquery-3.7.0.min.js"></script>
+<script src="plotly-2.23.2.min.js"></script>
+<script src="###NODE_NAME###.data.js"></script>
+<script src="side.js"></script>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="plot_usage.js"></script>
+
+<body>
+  <div class="sidenav" id="side_nav">
+  </div>
+  <div class="main">
+    <div id="figure">
+    </div>
+    <div class="options">
+      <select id="ma_type_selector" va onchange="onMaTypeChange(this.value)">
+        <option value="feedback_val">feedback_val</option>
+        <option value="todo">todo</option>
+      </select>
+      <label> ma: </label>
+      <select id="ma_value_selector" va onchange="onMaValueChange(this.value)">
+        <option value="todo">todo</option>
+      </select>
+      <div id="custom_ma">
+        <label>custom ma: </label>
+        <input type="text" id="custom_ma_value">
+        <button onclick="addCustomMa()">confirm</button>
+        </input>
+      </div>
+    </div>
+    <div>
+      <p>
+      <a href="index.html">HOME</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
